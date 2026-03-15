@@ -25,14 +25,12 @@ int main(int argc, char *argv[])
 
     // emit object1->mySignal("Hello World again!");
 
-
     // MyQObject *object = new MyQObject();
     // object->setProperty("information", "Hello World!");
     // object->setProperty("value", 50);
 
     // qInfo() << "Information property: " << object->property("information");
     // qInfo() << "Value property: " << object->property("value");
-
 
     // MyQObject *object = new MyQObject();
     // qInfo() << "--------------- OBJECT INFO ---------------";
@@ -72,7 +70,7 @@ int main(int argc, char *argv[])
 
     // 3. THIẾT LẬP "DI CHÚC" (Dọn dẹp tự động ngay sau khi tạo)
     // Gom nhóm các lệnh quản lý vòng đời vào một chỗ để dễ kiểm soát
-    QObject::connect(&thread, &QThread::finished, source,      &QObject::deleteLater);
+    QObject::connect(&thread, &QThread::finished, source, &QObject::deleteLater);
     QObject::connect(&thread, &QThread::finished, destination, &QObject::deleteLater);
 
     // 4. CẤU HÌNH ĐA LUỒNG & KẾT NỐI LOGIC
