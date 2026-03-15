@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Gui Qml Quick)
 
 add_executable(qobject_section
   main.cpp
@@ -21,6 +22,8 @@ add_executable(qobject_section
   myqobject2.h
   connection_type.cpp
   connection_type.h
+  main.qml
+
 )
 target_link_libraries(qobject_section PRIVATE Qt${QT_VERSION_MAJOR}::Core)
 
