@@ -19,6 +19,8 @@ add_executable(qobject_section
   myqobject2.cpp
   myqobject1.h
   myqobject2.h
+  connection_type.cpp
+  connection_type.h
 )
 target_link_libraries(qobject_section PRIVATE Qt${QT_VERSION_MAJOR}::Core)
 
